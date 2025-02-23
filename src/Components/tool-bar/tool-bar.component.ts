@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { MainServiceService } from '../../Services/MainService/main-service.service';
 
 @Component({
   selector: 'tool-bar',
@@ -11,5 +12,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './tool-bar.component.css'
 })
 export class ToolBarComponent {
-  logged = false;
+  servizio = inject(MainServiceService);
 }

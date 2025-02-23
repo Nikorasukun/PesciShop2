@@ -1,5 +1,5 @@
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { merge } from 'rxjs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { MainServiceService } from '../../Services/MainService/main-service.service';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class LoginComponent {
   readonly email = new FormControl('', [Validators.required, Validators.email]);
+
+  servizioPrincipale = inject(MainServiceService);
 
   errorMessage = signal('');
 
@@ -39,5 +42,12 @@ export class LoginComponent {
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
+  }
+
+
+  tryToLog(){
+    console.log(this.servizioPrincipale.isLogged())
+    this.servizioPrincipale.isLogged.set(true);
+    console.log(this.servizioPrincipale.isLogged())
   }
 }
