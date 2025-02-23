@@ -1,0 +1,20 @@
+.example-container {
+    display: flex;
+    flex-direction: column;  /* stack items vertically */
+    align-items: center;     /* center items horizontally */
+    gap: 8px;                /* add space between items */
+  }
+
+.example-container mat-form-field {
+    width: 20em;
+}
+
+
+.example-right-align {
+    text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}

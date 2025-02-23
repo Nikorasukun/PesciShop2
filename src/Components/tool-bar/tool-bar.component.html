@@ -1,0 +1,28 @@
+<mat-toolbar>
+    <mat-icon>shop</mat-icon>
+    <span>Pesci's Shop</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/" aria-label="Catalog button">
+        Home
+    </button>
+    <button mat-button routerLink="/catalogo" aria-label="Catalog button">
+        Catalogo
+    </button>
+    <button mat-button routerLink="/chisiamo" aria-label="Chi Siamo button">
+        Chi Siamo
+    </button>
+
+    @if(logged) {
+    <button mat-button aria-label="Logout button">
+        Logout
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Cart button">
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+    }
+    @else {
+    <button mat-button routerLink="/login" aria-label="Login button" >
+        Login
+    </button>
+    }
+</mat-toolbar>
