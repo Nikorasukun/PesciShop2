@@ -1,20 +1,21 @@
 .example-container {
-    display: flex;
-    flex-direction: column;  /* stack items vertically */
-    align-items: center;     /* center items horizontally */
-    gap: 8px;                /* add space between items */
-  }
-
-.example-container mat-form-field {
-    width: 20em;
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  align-items: center;     /* center items horizontally */
+  justify-content: center; /* center items vertically */
+  height: 100vh;           /* make container full height of the viewport */
+  gap: 8px;                /* add space between items */
 }
 
+.example-container mat-form-field {
+  width: 20em;
+}
 
 .example-right-align {
-    text-align: right;
+  text-align: right;
 }
 
 input.example-right-align::-webkit-outer-spin-button,
 input.example-right-align::-webkit-inner-spin-button {
-    display: none;
+  display: none;
 }
