@@ -13,7 +13,7 @@
     </button>
 
     @if(this.servizio.isLogged()) {
-    <button mat-button aria-label="Logout button">
+    <button mat-button aria-label="Logout button" (click)="logout()">
         Logout
     </button>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Cart button">

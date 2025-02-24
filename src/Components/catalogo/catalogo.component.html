@@ -1,1 +1,24 @@
-<h1>CATALOGO SEEE</h1>
+<div class="pesci">
+  @for (pesce of pesci; track pesce) {
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{pesce.Nome}}</mat-card-title>
+      <mat-card-subtitle>{{pesce.Acqua}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="pesce.Immagine" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        It is {{pesce.Lunghezza}}cm long.<br>
+        It is {{pesce.Colore}}.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Cart button">
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+    </mat-card-actions>
+  </mat-card>
+  }
+
+</div>

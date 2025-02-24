@@ -13,4 +13,10 @@ import { MainServiceService } from '../../Services/MainService/main-service.serv
 })
 export class ToolBarComponent {
   servizio = inject(MainServiceService);
+
+  servizioPrincipale = inject(MainServiceService)
+
+  logout() {
+    this.servizioPrincipale.isLogged.set(false);
+  }
 }
