@@ -11,6 +11,6 @@
 .pesci {
   display: flex;
   flex-wrap: wrap;
-  gap: 128px;
+  gap: 144px;
 }
 

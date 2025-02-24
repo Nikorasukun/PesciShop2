@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  width: 30em;
+  flex-wrap: wrap;
+  flex-direction: column;  /* stack items vertically */
+  align-items: center;     /* center items horizontally */
+  justify-content: center; /* center items vertically */
+  height: 90vh;           /* make container full height of the viewport */
+  gap: 8px;                /* add space between items */
+}
+
+.main p {
+  text-align: center; /* center the text inside the paragraph */
+}
