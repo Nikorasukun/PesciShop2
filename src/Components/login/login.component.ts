@@ -48,9 +48,7 @@ export class LoginComponent {
   fetchUtenti() {
     this.http.get('http://localhost:8089/api/clienti').subscribe({
       next: (clienti) => {
-        this.clienti = clienti; //do il risultato giusto
-        console.log('clienti');
-        console.log(clienti);
+        this.clienti = clienti;
       },
       error: (error) => {
         console.error('error fetching data ', error);
